@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <h2>Profile</h2>
+      {% if user %}
+        <p>Username: {{ user.username }}</p>
+        <p>Email: {{ user.email }}</p>
+      {% else %}
+        <p>You are not logged in. <a href="/login">Login</a></p>
+      {% endif %}
+    </div>
+  </body>
+</html>
